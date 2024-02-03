@@ -1,0 +1,132 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure the body takes at least the full height of the viewport */
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333; 
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a, footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+header button, footer button {
+    margin-left: 10px;
+}
+
+button {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049; 
+}
+
+.button-group {
+    margin-left: auto;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details-container {
+    max-width: 800px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card-image img {
+    width: 300px; 
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.card-info {
+    flex-grow: 1;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-center;
+}
+
+body.electric {
+    background: linear-gradient(to right, #f3f391, #dbdb83);
+}
+
+body.water {
+    background: linear-gradient(to right, #68869d, #5e798d);
+}
+
+body.fire {
+    background: linear-gradient(to right, #d87042, #c6673c);
+}
+
+body.bug {
+    background: linear-gradient(to right, #b99854, #a7884c);
+}
+
+body.grass {
+    background: linear-gradient(to right, #95c98c, #87b57f);
+}
+
+body.poison {
+    background: linear-gradient(to right, #7b4980, #653c69);
+}
+
+body.normal {
+    background: linear-gradient(to right, #c3c3a3, #a5a587);
+}
+
+body.fairy {
+    background: linear-gradient(to right, #f3bce7, #f2bbe6);
+}
+
+
+@media (max-width: 768px) {
+    .card-details {
+        flex-direction: column;
+    }
+
+    .card-info {
+        width: 100%;
+        align-items: center;
+        margin-top: 20px;
+    }
+}

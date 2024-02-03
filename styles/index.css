@@ -1,0 +1,234 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav, footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    margin-top: auto;
+}
+
+nav a, footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.user-info {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+nav button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Style the filter form */
+.filter-form {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.filter-form form {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.filter-form select, .filter-form input[type="submit"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.filter-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.filter-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 187px);
+    gap: 10px;
+    margin: 0 150px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    /* transition: transform 0.3s ease; */
+    overflow: hidden;
+    position: relative;
+    height: 316px;
+}
+
+/* .card:hover {
+    transform: scale(1.05);
+} */
+
+.card-image {
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.card-content {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-type {
+    display: inline-block;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.card-stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.card-stats img {
+    margin-right: 3px;
+}
+
+.card-stats span {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-content a {
+    text-decoration: none;
+}
+
+.card-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #57797d;
+}
+
+.card-price {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-button {
+    display: block;
+    width: 100%; /* This will make the button take up the full width of its parent element */
+    padding: 10px;
+    background-color: #ffcc00;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none; /* This will remove the border */
+    font-size: 16px; /* Adjust as needed */
+}
+
+.buy-button:hover {
+    background-color: #e6b800;
+}
+
+.card-container {
+    display: inline-block; 
+    vertical-align: top; 
+    width: 187px; 
+    margin-bottom: 15px; 
+    transition: transform 0.3s ease;
+}
+
+.card-container:hover {
+    transform: scale(1.05); 
+}
+
+.card {
+    width: 100%; 
+}
+
+.card-image.electric, .card-type.electric { background: linear-gradient(to right, #f3f391, #dbdb83) }
+.card-image.water, .card-type.water { background: linear-gradient(to right, #68869d, #5e798d); }
+.card-image.fire, .card-type.fire { background: linear-gradient(to right, #d87042, #c6673c); }
+.card-image.bug, .card-type.bug { background: linear-gradient(to right, #b99854, #a7884c); }
+.card-image.grass, .card-type.grass { background: linear-gradient(to right, #95c98c, #87b57f); }
+.card-image.poison, .card-type.poison { background: linear-gradient(to right, #7b4980, #653c69); }
+.card-image.normal, .card-type.normal { background: linear-gradient(to right, #c3c3a3, #a5a587); }
+.card-image.fairy, .card-type.fairy { background: linear-gradient(to right, #f3bce7, #f2bbe6); }
+
+@media screen and (min-width: 800px) {
+    .card-grid {
+        grid-template-columns: repeat(5, 187px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(187px, 1fr));
+    }
+}
