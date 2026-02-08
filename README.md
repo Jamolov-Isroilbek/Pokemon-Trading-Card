@@ -70,9 +70,10 @@ Open `http://localhost:8000` in your browser.
 
 ### Default Admin Account
 
-| Username | Password |
-|----------|----------|
-| `admin`  | `admin`  |
+| Username | Password | Role |
+|----------|----------|------|
+| `admin`  | `admin`  | Admin |
+| `demo`   | `demo1234` | User |
 
 New users start with a balance of €2,000.
 
