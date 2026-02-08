@@ -16,80 +16,11 @@
         }
     },
     {
-        "username": "Isroilbek",
-        "email": "jamolovisroilbek@gmail.com",
-        "password": "$2y$10$zqTvsFPir8N9E0y3eYSWhuvnIu2\/ucBQscIwu0vHjpGjm3M.7ukAm",
+        "username": "demo",
+        "email": "demo@example.com",
+        "password": "$2y$10$examplehashhere",
         "isAdmin": false,
         "balance": 2000,
         "cards": []
-    },
-    {
-        "username": "Xonzoda",
-        "email": "xonzoda@gmail.com",
-        "password": "$2y$10$0P.UalEIZe0GYKFN4bhM9OOv3hM3eQrb73JuGFgMcZ2QeAnMhpGdi",
-        "isAdmin": false,
-        "balance": 2000,
-        "cards": []
-    },
-    {
-        "username": "Jamila",
-        "email": "jamila@gmail.com",
-        "password": "$2y$10$BuF\/.nL\/i4UyMyIv0nZvI.QO26ddpsVARZCc1s9PXhxEhVfLkmObm",
-        "isAdmin": false,
-        "balance": 2000,
-        "cards": []
-    },
-    {
-        "username": "Bastoni",
-        "email": "bastoni@gmail.com",
-        "password": "$2y$10$GzxtxDRYT8FpypZRFND40.QjRsE22w6E7LnU8\/MC\/kDGoAoHDPiY.",
-        "isAdmin": false,
-        "balance": 2000,
-        "cards": []
-    },
-    {
-        "username": "Muslim",
-        "email": "muslim@gmail.com",
-        "password": "$2y$10$JDcV3QQ50X3wMk.xmUG.m.1KET\/JkaOiLp2P6mkkJIAnZgs0rKFoi",
-        "isAdmin": false,
-        "balance": 2000,
-        "cards": []
-    },
-    {
-        "username": "Rebecca",
-        "email": "rebecca@gmail.com",
-        "password": "$2y$10$r6koekXFeNp6jpn\/H91OhOmclRDzTV8kjFAx239MiC\/HxVCZzK\/7a",
-        "isAdmin": false,
-        "balance": 2000,
-        "cards": []
-    },
-    {
-        "username": "Khabib",
-        "email": "khabib@gmail.com",
-        "password": "$2y$10$foCr2cE2HZayzKEGyOwt5O1rJoax4wAldY3U4vr8FF8h76i7R9Kni",
-        "isAdmin": false,
-        "balance": 2000,
-        "cards": []
-    },
-    {
-        "username": "Leo",
-        "email": "leo@gmail.com",
-        "password": "$2y$10$Z.IvgWV5C72ArwQ9yc8XE.BXTHgYwo1LvvVBBP6cFInm26hnHW1QC",
-        "isAdmin": false,
-        "balance": 1435,
-        "cards": []
-    },
-    {
-        "username": "Omar",
-        "email": "omar@gmail.com",
-        "password": "$2y$10$5sKy3A8Qs8IIMl2TdNWUOeZTL4ikR0odIPznLHKuCn0wY8wPX3BWK",
-        "isAdmin": false,
-        "balance": 607,
-        "cards": {
-            "1": "Bulbasaur",
-            "2": "Charizard",
-            "3": "Weedle",
-            "4": "Squirtle"
-        }
     }
 ]
