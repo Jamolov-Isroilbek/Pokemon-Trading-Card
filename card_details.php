@@ -1,5 +1,5 @@
 <?php
-require_once 'Storage.php';
+require_once 'storage.php';
 $storage = new Storage('data/cards.json');
 $cardName = $_GET['name'] ?? 'Pikachu';
 $card = $storage->getCardByName($cardName);
