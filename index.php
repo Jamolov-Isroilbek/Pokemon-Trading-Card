@@ -27,14 +27,14 @@ foreach ($users as $user) {
 // Fetch the user data
 $users = json_decode(file_get_contents('data/users.json'), true);
 $currentUser = [];
-$currentUserCards = $currentUser['cards'] ?? [];
-$currentUserBalance = $currentUser['balance'] ?? 0;
 foreach ($users as $user) {
     if ($user['username'] === $username) {
         $currentUser = $user;
         break;
     }
 }
+$currentUserCards = $currentUser['cards'] ?? [];
+$currentUserBalance = $currentUser['balance'] ?? 0;
 ?>
 
 
