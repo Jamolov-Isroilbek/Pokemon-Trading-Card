@@ -1,52 +1,115 @@
-Isroilbek Jamolov
-DXFV5Y
+# IKémon Trading Platform
 
-Web programming - assignment
-This solution was submitted and created by the student above for the Web Programming course.
-I declare that this solution is my own work. I did not copy or use it from a third party
-solutions from third parties. I did not forward my solution to my fellow students, nor did I publish it.
-Eötvös Loránd University Student Requirements System
-(Organizational and Operational Regulations of ELTE, Volume II, § 74/C) states that as long as,
-as long as a student has been working on the work - or at least a significant part of it - of another student
-of another student's work as his or her own, it is a disciplinary offence.
-The most serious consequence of a disciplinary offence is dismissal from the university.
+A browser-based Pokémon card trading platform where users can buy, sell, and collect cards. Built with vanilla PHP, JavaScript, and JSON-based file storage.
 
-### Minimum required (not accepted without them, 6 points)
-[x] `0.0 points` Readme.md file: completed, uploaded
-[x] `0.0 points` Main page: displayed
-[x] `1.0 points` Main page: listing of all cards, e.g. with pictures
-[x] `1.0 points` Main page: click on the name of the card to go to the details page of the corresponding card
-[x] `1.0 point` Card details: Display the name, HP, description and element of the monster on the card
-[x] `0.5 points` Card details: The image associated with the card is displayed
-[x] `0.5 points` Card details: the colour or background colour of one or more elements on the page changes according to the element of the monster on the card, e.g. Fire is red, Lightning is yellow, etc.
-[x] `2.0 points` Admin: Create new card: error handling, successful save (without authentication)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 
-### The basic tasks (14 points)
-[x] `0.5 points` Registration form: contains appropriate elements
-[x] `0.5 points` Registration form: error handling, error message, status maintenance
-[x] `0.5 points` Registration form: Successful registration
-[x] `0.5 points` Login: Error handling
-[x] `0.5 points` Login: Successful login
-[x] `0.5 points` Logout
-[x] `0.5 points` Main page: User name and money displayed
-[x] `0.5 points` Main page: Click on the username to go to the user details page
-[x] `1.0 point` Main page: Allows you to filter cards by type.
-[x] `0.5 points` User details: Displays the user's name, email address, money
-[x] `0.5 points` User details: Cards associated with the user are displayed
-[x] `2.0 points` User details: a sell button appears next to the user's cards, which allows the user to sell the card, the sold card is deleted from the user's cards and the user receives 90% of the price of the card. The sold card is returned to the ADMIN deck. (Where and how you place the sell button is up to you)
-[x] `0.5 points` Admin: You can log in with the admin user details
-[x] `0.5 points` Admin: New card creation is only available with Admin user
-[x] `0.5 points` Main page: When logged in, a buy button should appear under each card
-[x] `1.5 points` Main page (Buy): You can buy the card
-[x] `0.5 points` Main page (Buy): You can only buy as much as you have
-[x] `0.5 points` Main page (Buy): You can buy up to 5 cards
-[x] `1.0 point` Nice design
+## Overview
 
-### Extra tasks (at most plus 5 points)
-[ ] `0.5 points` Admin: Card modification: available to admin user for cards not yet sold
-[ ] `0.5 points` Admin: Card modification: error handling, status maintenance, successful save
-[ ] `1.0 point` Main page: click on a button on the main page to allow non-admin users to buy a random card with their money, a random card can cost e.g.: 50 coins.
-[ ] `2.0 points` Main page: on the main page only 9 cards should be displayed at a time, underneath them you can navigate through the pages (with page numbers, arrows). Always display cards corresponding to the current page number, each page should display the next 9 cards. To solve this, use AJAX/fetch.
-[ ] `1.0 point` Exchange Step 1: On the main page, for cards that are not in the admin and are in our house, a replacement button should appear, which the user can click to replace any card with this card.
-[ ] `1.0 point` Exchange Step 2: The exchange should not be immediate and voluntary, but the other party should be notified and be able to accept or reject it.
-[ ] `1.0 point` Exchange Step 3: The exchange can include the possibility to add money to either side. Watch out for negative numbers!
+IKémon is a multi-user trading card platform with role-based access control. Regular users browse, buy, and sell Pokémon cards, while admins manage the card catalog. All data is persisted using JSON files, with session-based authentication and server-side validation.
+
+### Key Features
+
+- **Card Marketplace** — Browse, filter by type, and purchase cards from the admin deck
+- **User Accounts** — Registration with password validation, session-based authentication
+- **Trading System** — Buy cards (up to 5) and sell back at 90% value
+- **Admin Panel** — Create new cards with image upload and validation
+- **Type Filtering** — Filter cards by Pokémon type (Electric, Water, Fire, Grass, etc.)
+- **Dynamic Theming** — Card detail pages change colors based on Pokémon element type
+
+## Project Structure
+
+```
+pokemon-trading-card/
+├── index.php               # Main marketplace page
+├── login.php               # User authentication
+├── signup.php              # User registration
+├── card_details.php        # Individual card view
+├── user_details.php        # User profile and owned cards
+├── buy_card.php            # Purchase handler
+├── sell_card.php           # Sell handler
+├── add_card.php            # Admin: create new card
+├── upload.php              # Image upload handler
+├── storage.php             # JSON file storage class
+├── data/
+│   ├── cards.json          # Card database
+│   └── users.json          # User database
+├── assets/
+│   ├── Images/             # Card artwork (32 Pokémon)
+│   └── Icons/              # UI icons (HP, Attack, Defense, Price)
+├── styles/
+│   ├── index.css           # Marketplace styles
+│   ├── signup.css          # Auth form styles
+│   ├── details.css         # Card detail page
+│   ├── add_card.css        # Admin form styles
+│   ├── user_details.css    # Profile page styles
+│   └── alert.css           # Notification banner
+└── scripts/
+    └── form.js             # Form utilities and alerts
+```
+
+## Getting Started
+
+### Prerequisites
+
+- PHP 7.4+ with `json` extension
+- A web server (Apache, Nginx) or PHP's built-in server
+
+### Running Locally
+
+```bash
+git clone https://github.com/Jamolov-Isroilbek/pokemon-trading-card.git
+cd pokemon-trading-card
+php -S localhost:8000
+```
+
+Open `http://localhost:8000` in your browser.
+
+### Default Admin Account
+
+| Username | Password |
+|----------|----------|
+| `admin`  | `admin`  |
+
+New users start with a balance of €2,000.
+
+## Usage
+
+### As a User
+1. **Sign up** with a username, email, and strong password
+2. **Browse** cards on the marketplace and filter by type
+3. **Buy** cards (max 5 cards, must have sufficient balance)
+4. **View** your collection on the User Details page
+5. **Sell** cards back for 90% of their original price
+
+### As Admin
+1. **Log in** with admin credentials
+2. **Add new cards** with name, stats, type, price, description, and image
+3. Cards are validated server-side before being added to the catalog
+
+## Tech Stack
+
+| Category | Technologies |
+|----------|-------------|
+| Backend | PHP 7.4+ (vanilla, no framework) |
+| Frontend | HTML5, CSS3, JavaScript |
+| Data Storage | JSON files |
+| Authentication | PHP Sessions, `password_hash()` / `password_verify()` |
+| File Upload | PHP `move_uploaded_file()` with type/size validation |
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+**Isroilbek Jamolov** — [GitHub](https://github.com/Jamolov-Isroilbek)
+
+---
+
+<p align="center">
+  <i>Built as a university web programming project at ELTE</i>
+</p>
